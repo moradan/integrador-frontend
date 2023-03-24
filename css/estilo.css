@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+.text-bg-secondary {
+    background-color: #353A40!important;
+    color: #EEEFEF!important;
+}
+
+a {
+    color: #EEEFEF!important;
+    text-decoration: none;
+}

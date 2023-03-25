@@ -18,7 +18,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg text-bg-secondary px-3 position-sticky top-0" data-bs-theme="dark">
+    <nav class="container-fluid row navbar navbar-expand-lg text-bg-secondary px-2 m-0 position-sticky top-0" data-bs-theme="dark">
         <span class="navbar-brand col-3">
             <img 
                 class="img-fluid"
@@ -27,7 +27,7 @@
             <span>Conf Bs As</span>
         </span>
         <button
-            class="navbar-toggler navbar-dark"
+            class="navbar-toggler navbar-dark col-2"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -36,25 +36,21 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <span class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a href="#">La conferencia</a>
-            <a href="#">Los oradores</a>
-            <a href="#">El lugar y la fecha</a>
-            <a href="#">Conviértete en orador</a>
-            <a href="#">Comprar tickets</a>
+        <span class="collapse navbar-collapse col-7" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="col-12" href="#">La conferencia</a></li>
+                <li><a class="col-12" href="#">Los oradores</a></li>
+                <li><a class="col-12" href="#">El lugar y la fecha</a></li>
+                <li><a class="col-12" href="#">Conviértete en orador</a></li>
+                <li><a class="col-12" href="#">Comprar tickets</a></li>
+            </ul>
         </span>  
         </div>
     </nav>
     
-    <section id="conferencia" class="container-fluid mb-3 p-0 pb-3 bg-dark bg-opacity-75 text-white">
-        <div class="col-12 mb-3">
-            <img
-                class="img-fluid mb-3" 
-                src="./img/ba1.jpg" 
-                alt="imagen de buenos aires">
-        </div>
-        <div class="container pe-2 col-11 text-end">
-            <h1>Conf Bs As</h1>
+    <section id="conferencia" class="card mb-3 p-0 pb-3 bg-dark bg-opacity-75 text-white">
+        <div class="card-body pe-2 col-12 text-end">
+            <h1 class="card-title">Conf Bs As</h1>
             <p>
                 Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
             </p>
@@ -69,11 +65,11 @@
     <section id="oradores" class="container-fluid">
         <h6 class="text-center">conoce a los</h6>
         <h2 class="text-center mb-3">oradores</h2>
-        <div class="container-fluid row">
+        <div id="lista-oradores" class="container-fluid row">
             <div id="orador-1" class="container-fluid col-lg-4 mb-5">
                 <img 
-                    class="img-responsive rounded mb-3"
-                    src="./img/steve.jpg" 
+                    class="img-fluid rounded mb-3"
+                    src="./img/steve-big.jpg" 
                     alt="foto de Steve Jobs">
                 <div>
                     <span class="bg-warning rounded px-2 fs-6">JavaScript</span>

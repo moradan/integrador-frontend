@@ -7,9 +7,9 @@ ol, ul {
     list-style-type: none;
 }
 
-.text-bg-secondary {
-    background-color: #353A40!important;
-    color: #EEEFEF!important;
+em {
+    font-style: normal;
+    text-decoration: underline dotted;
 }
 
 a {
@@ -19,4 +19,14 @@ a {
 
 h2, h6 {
     text-transform: uppercase;
+}
+
+.text-bg-secondary {
+    background-color: #353A40!important;
+    color: #EEEFEF!important;
+}
+
+.img-cover {
+    height: 100%;
+    width: auto;
 }

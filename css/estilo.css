@@ -16,3 +16,7 @@ a {
     color: #EEEFEF!important;
     text-decoration: none;
 }
+
+h2, h6 {
+    text-transform: uppercase;
+}

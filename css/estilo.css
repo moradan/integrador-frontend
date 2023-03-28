@@ -26,7 +26,12 @@ h2, h6 {
     color: #EEEFEF!important;
 }
 
-.img-cover {
-    height: 100%;
-    width: auto;
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+.navbar-collapse {
+    text-align: end;
+    flex-direction: row-reverse;
 }

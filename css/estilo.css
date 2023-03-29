@@ -12,21 +12,55 @@ em {
     text-decoration: underline dotted;
 }
 
-a {
-    color: #EEEFEF!important;
-    text-decoration: none;
+header {
+    z-index: 1;
 }
 
 h2, h6 {
     text-transform: uppercase;
 }
 
-.text-bg-secondary {
-    background-color: #353A40!important;
-    color: #EEEFEF!important;
+.fs-7 {
+    font-size: 0.8rem;
 }
 
-.img-cover {
-    height: 100%;
-    width: auto;
+.text-bg-secondary {
+    background-color: #353A40!important;
+    color: #EEEFEF;
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+.navbar-collapse {
+    text-align: end;
+    flex-direction: row-reverse;
+}
+
+.conferencia-articulo {
+    display: inline-block;
+}
+
+.volver-arriba {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+@media only screen and (max-width: 575px) {
+    .conferencia-articulo {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 756px) {
+    .conferencia-articulo {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }

@@ -12,18 +12,13 @@ em {
     text-decoration: underline dotted;
 }
 
-a {
-    color: #EEEFEF!important;
-    text-decoration: none;
-}
-
 h2, h6 {
     text-transform: uppercase;
 }
 
 .text-bg-secondary {
     background-color: #353A40!important;
-    color: #EEEFEF!important;
+    color: #EEEFEF;
 }
 
 .navbar-brand img {
@@ -34,4 +29,16 @@ h2, h6 {
 .navbar-collapse {
     text-align: end;
     flex-direction: row-reverse;
+}
+
+@media only screen and (min-width: 768px) {
+    .conferencia {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .conferencia-md {
+        display: none;
+    }
 }

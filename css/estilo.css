@@ -12,8 +12,16 @@ em {
     text-decoration: underline dotted;
 }
 
+header {
+    z-index: 1;
+}
+
 h2, h6 {
     text-transform: uppercase;
+}
+
+.fs-7 {
+    font-size: 0.8rem;
 }
 
 .text-bg-secondary {
@@ -31,14 +39,22 @@ h2, h6 {
     flex-direction: row-reverse;
 }
 
-@media only screen and (min-width: 576px) {
-    .conferencia {
-        display: none;
-    }
+.conferencia-articulo {
+    display: inline-block;
 }
 
 @media only screen and (max-width: 575px) {
-    .conferencia-sm {
-        display: none;
+    .conferencia-articulo {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 756px) {
+    .conferencia-articulo {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }

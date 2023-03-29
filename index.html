@@ -22,7 +22,7 @@
 
   <body>
 
-    <header class="container-fluid bg-secondary-subtle px-0 px-lg-2 px-xl-5" data-bs-theme="dark">
+    <header class="container-fluid position-sticky top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
         <div class="navbar navbar-expand-lg p-0">
             <a href="#" class="navbar-brand col-2 p-0">
                 <img
@@ -52,45 +52,46 @@
         </div>
     </header>
     
-    <section class="conferencia container-fluid bg-dark bg-opacity-75 text-white mb-5 p-0">
-        <img
+    <section id="conferencia">
+        <section class="container-fluid position-relative clearfix mb-5 p-0">
+            <img
+                class="img-fluid"
+                src="./img/ba1.jpg"
+                alt="foto de buenos aires">
+            <article class="conferencia-articulo w-100 h-100 pe-3 pe-md-4 pe-lg-5 pt-5 pb-3 bg-dark bg-opacity-75 text-white float-end text-end">
+                <h1>Conf Bs As</h1>
+                <p class="d-inline-block col-11 col-sm-9 col-md-6 col-lg-4">
+                    Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
+                </p>
+                <p>¡Te esperamos!</p>
+                <div class="container-fluid clearfix p-0">
+                    <a class="btn btn-success float-end ms-2 mb-2">Comprar tickets</a>
+                    <a class="btn btn-outline-light float-end">Quiero ser orador</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- <section class="conferencia-sm container-fluid position-relative w-100 h-auto text-white mb-5 p-0">
+            <img
             class="img-fluid"
             src="./img/ba1.jpg"
             alt="foto de buenos aires">
-        <article class=" px-3 pb-3 col-12 text-end">
-            <h1>Conf Bs As</h1>
-            <p>
-                Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
-            </p>
-            <p>¡Te esperamos!</p>
-            <div class="container-fluid clearfix p-0">
-                <a class="btn btn-success float-end ms-2 mb-2">Comprar tickets</a>
-                <a class="btn btn-outline-light float-end">Quiero ser orador</a>
-            </div>
-        </article>
+            <article class="position-absolute top-0 h-100 bg-dark bg-opacity-75 pt-5 px-3 pb-3 col-12 text-end">
+                <h1>Conf Bs As</h1>
+                <p class="d-inline-block w-50">
+                    Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
+                </p>
+                <p>¡Te esperamos!</p>
+                <div class="container-fluid clearfix p-0">
+                    <a class="btn btn-success float-end ms-2">Comprar tickets</a>
+                    <a class="btn btn-outline-light float-end">Quiero ser orador</a>
+                </div>
+            </article>
+        </section> -->
     </section>
-
-    <section class="conferencia-sm container-fluid position-relative w-100 h-auto text-white mb-5 p-0">
-        <img
-        class="img-fluid"
-        src="./img/ba1.jpg"
-        alt="foto de buenos aires">
-        <article class="position-absolute top-0 h-100 bg-dark bg-opacity-75 pt-5 px-3 pb-3 col-12 text-end">
-            <h1>Conf Bs As</h1>
-            <p class="d-inline-block w-50">
-                Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
-            </p>
-            <p>¡Te esperamos!</p>
-            <div class="container-fluid clearfix p-0">
-                <a class="btn btn-success float-end ms-2">Comprar tickets</a>
-                <a class="btn btn-outline-light float-end">Quiero ser orador</a>
-            </div>
-        </article>
-    </section>
-
-    <!--
-    <section id="oradores" class="container-fluid">
-        <h6 class="text-center">conoce a los</h6>
+    
+    <section id="oradores" class="container">
+        <h6 class="text-center fw-light">conoce a los</h6>
         <h2 class="text-center mb-3">oradores</h2>
         <div id="lista-oradores" class="container-fluid row">
             <div id="orador-1" class="container-fluid col-lg-4 mb-5">
@@ -99,8 +100,8 @@
                     src="./img/steve-big.jpg" 
                     alt="foto de Steve Jobs">
                 <div>
-                    <span class="bg-warning rounded px-2 fs-6">JavaScript</span>
-                    <span class="bg-primary text-white rounded px-2 fs-6">React</span>
+                    <span class="bg-warning rounded px-2 fs-7">JavaScript</span>
+                    <span class="bg-primary text-white rounded px-2 fs-7">React</span>
                 </div>
                 <h5 class="mb-2">Steve Jobs</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
@@ -113,8 +114,8 @@
                     src="./img/bill.jpg" 
                     alt="foto de Bill Gates">
                 <div>
-                    <span class="bg-warning rounded px-2 fs-6">JavaScript</span>
-                    <span class="bg-primary text-white rounded px-2 fs-6">React</span>
+                    <span class="bg-warning rounded px-2 fs-7">JavaScript</span>
+                    <span class="bg-primary text-white rounded px-2 fs-7">React</span>
                 </div>
                 <h5 class="mb-2">Bill Gates</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
@@ -127,8 +128,8 @@
                     src="./img/ada.jpeg" 
                     alt="foto de Ada Lovelace">
                 <div>
-                    <span class="bg-secondary text-white rounded px-2 fs-6">Negocios</span>
-                    <span class="bg-danger text-white rounded px-2 fs-6">Startups</span>
+                    <span class="bg-secondary text-white rounded px-2 fs-7">Negocios</span>
+                    <span class="bg-danger text-white rounded px-2 fs-7">Startups</span>
                 </div>
                 <h5 class="mb-2">Ada Lovelace</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
@@ -136,7 +137,6 @@
             </div>
         </div>
     </section>
-    -->
 
     <!--
     <section id="locacion" class="container-fluid row clearfix m-0 p-0 mb-5">

@@ -12,6 +12,10 @@ em {
     text-decoration: underline dotted;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 header {
     z-index: 1;
 }
@@ -63,4 +67,8 @@ h2, h6 {
         right: 0;
         top: 0;
     }
+}
+
+#oradores, #locacion, #anotarse {
+    scroll-margin-top: 5rem;
 }

@@ -69,6 +69,6 @@ h2, h6 {
     }
 }
 
-#oradores, #locacion, #anotarse {
+#conferencia, #oradores, #locacion, #anotarse {
     scroll-margin-top: 5rem;
 }

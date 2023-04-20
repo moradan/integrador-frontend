@@ -68,19 +68,21 @@ a:hover {
 }
 
 .destino-nav {
-    scroll-margin-top: 3rem;
+    scroll-margin-top: 2.9rem;
 }
 
 .titulo-seccion {
     display: flex;
     flex-direction: column-reverse;
 
+    padding-top: 0.7rem;
+
     text-transform: uppercase;
     text-align: center;
 }
 
 .volanta {
-    font-size: 1rem;
-    font-weight: lighter;
+    font-size: 0.7rem;
+    font-weight: normal;
     margin-bottom: 0;
 }

@@ -16,12 +16,8 @@ a:hover {
     cursor: pointer;
 }
 
-header {
+.position-sticky {
     z-index: 1;
-}
-
-h2, h6 {
-    text-transform: uppercase;
 }
 
 .fs-7 {
@@ -47,11 +43,13 @@ h2, h6 {
     display: inline-block;
 }
 
+/* estas reglas son para la flech arriba que por el momento esta descartada.
 .volver-arriba {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
 }
+*/
 
 @media only screen and (max-width: 575px) {
     .conferencia-articulo {
@@ -69,6 +67,22 @@ h2, h6 {
     }
 }
 
-#conferencia, #oradores, #locacion, #anotarse {
-    scroll-margin-top: 5rem;
+.destino-nav {
+    scroll-margin-top: 2.9rem;
+}
+
+.titulo-seccion {
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding-top: 0.7rem;
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.volanta {
+    font-size: 0.7rem;
+    font-weight: normal;
+    margin-bottom: 0;
 }

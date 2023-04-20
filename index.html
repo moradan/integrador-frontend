@@ -52,112 +52,128 @@
         </div>
     </header>
     
-    <section id="conferencia" class="container-fluid position-relative clearfix mb-5 p-0">
-        <img
-            class="img-fluid"
-            src="./img/ba1.jpg"
-            alt="foto de buenos aires">
-        <article class="conferencia-articulo w-100 h-100 pe-3 pe-md-4 pe-lg-5 pt-5 pb-3 bg-dark bg-opacity-50 text-white float-end text-end">
-            <h1>Conf Bs As</h1>
-            <p class="d-inline-block col-11 col-sm-9 col-md-6 col-lg-4">
-                Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
-            </p>
-            <p>¡Te esperamos!</p>
-            <div class="container-fluid clearfix p-0">
-                <a class="btn btn-success float-end ms-2 mb-2">Comprar tickets</a>
-                <a href="#anotarse" class="btn btn-outline-light float-end">Quiero ser orador</a>
+    <main>
+        <header id="conferencia" class="container-fluid destino-nav position-relative clearfix mb-5 p-0">
+            <img
+                class="img-fluid"
+                src="./img/ba1.jpg"
+                alt="foto de buenos aires">
+            <section class="conferencia-articulo w-100 h-100 pe-3 pe-md-4 pe-lg-5 pt-5 pb-3 bg-dark bg-opacity-50 text-white float-end text-end">
+                <h2>Conf Bs As</h2>
+                <p class="d-inline-block col-11 col-sm-9 col-md-6 col-lg-4">
+                    Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
+                </p>
+                <p>¡Te esperamos!</p>
+                <div class="container-fluid clearfix p-0">
+                    <a class="btn btn-success float-end ms-2 mb-2">Comprar tickets</a>
+                    <a href="#anotarse" class="btn btn-outline-light float-end">Quiero ser orador</a>
+                </div>
+            </section>
+        </header>
+        
+        <article id="oradores" class="container destino-nav pt-2">
+            <header class="titulo-seccion">
+                <h2 class="mb-3">oradores</h2>
+                <p class="volanta">conoce a los</p  >
+            </header>
+            <ul id="lista-oradores" class="container-fluid row gx-3 list-unstyled">
+                <li id="orador-1" class="col-lg-4 mb-5">
+                    <div class="card">
+                        <img
+                            class="card-img-top rounded mb-3"
+                            src="./img/steve-big.jpg"
+                            alt="foto de Steve Jobs">
+                        <div class="card-body">
+                            <div class="mb-1">
+                                <span class="bg-warning text-black badge">JavaScript</span>
+                                <span class="bg-primary badge">React</span>
+                            </div>
+                            <h3 class="cart-title mb-2">Steve Jobs</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
+                            Minus nobis eveniet id eligendi totam, repellat nemo sed nostrum cumque nam suscipit omnis alias accusantium hic iure voluptate doloribus. Consequatur molestiae nemo, eveniet sint placeat debitis facilis rem impedit!</p>
+                        </div>
+                    </div>
+                </li>
+                <li id="orador-2" class="col-lg-4 mb-5">
+                    <div class="card">
+                        <img
+                            class="card-img-top rounded mb-3"
+                            src="./img/bill.jpg"
+                            alt="foto de Bill Gates">
+                        <div class="card-body">
+                            <div class="mb-1">
+                                <span class="bg-warning text-black badge">JavaScript</span>
+                                <span class="bg-primary badge">React</span>
+                            </div>
+                            <h3 class="card-title mb-2">Bill Gates</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
+                            Minus nobis eveniet id eligendi totam, repellat nemo sed nostrum cumque nam suscipit omnis alias accusantium hic iure voluptate doloribus. Consequatur molestiae nemo, eveniet sint placeat debitis facilis rem impedit!</p>
+                        </div>
+                    </div>
+                </li>
+                <li id="orador-3" class="col-lg-4 mb-5">
+                    <div class="card">
+                        <img
+                            class="card-img-top rounded mb-3"
+                            src="./img/ada.jpeg"
+                            alt="foto de Ada Lovelace">
+                        <div class="card-body">
+                            <div class="mb-1">
+                                <span class="bg-secondary badge">Negocios</span>
+                                <span class="bg-danger badge">Startups</span>
+                            </div>
+                            <h3 class="card-title mb-2">Ada Lovelace</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
+                            Minus nobis eveniet id eligendi totam, repellat nemo sed nostrum cumque nam suscipit omnis alias accusantium hic iure voluptate doloribus. Consequatur molestiae nemo, eveniet sint placeat debitis facilis rem impedit!</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+
+        <article id="locacion" class="container-fluid row destino-nav clearfix m-0 p-0 mb-5">
+            <img src="./img/honolulu.jpg" alt="foto de honolulu" class="img-fluid p-0 col-12 col-lg-6">
+            <section class="bg-secondary text-white p-3 col-12 col-lg-6">
+                <h2>Bs As - Octubre</h2>
+                <p>Buenos Aires es la provincia y la localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km<sup>2</sup> de superficie).</p>
+                <a class="btn btn-outline-light">Conocé más</a>
+            </section>
+        </article>
+
+        <article id="anotarse" class="container-fluid destino-nav text-center mb-5">
+            <header class="titulo-seccion">
+                <h2 class="mb-3">orador</h2>
+                <p class="volanta">conviértete en un</p>
+            </header>
+            <p>Anótate como orador para dar una <em>charla ignite</em>.</p>
+            <p>¡Cuéntanos de qué quieres hablar!</p>
+            <div class="row">
+                <div class="col-12 col-md-6 mx-auto">
+                    <form class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-2">
+                                <input type="text" class="form-control" id="casilla-nombre" placeholder="Nombre">
+                            </div>
+                            <div class="col-12 col-md-6 mb-2">
+                                <input type="text" class="form-control col-12 col-md-6 mb-2" id="casilla-apellido" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-2"><textarea class="form-control mb-2" id="casilla-tema" cols="30" rows="6" placeholder="¿Sobre qué quieres hablar?"></textarea></div>
+                        </div>
+                        <div class="row text-start">
+                            <label class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un título para tu charla.</label>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success w-100">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </article>
-    </section>
-    
-    <section id="oradores" class="container">
-        <h6 class="text-center fw-light">conoce a los</h6>
-        <h2 class="text-center mb-3">oradores</h2>
-        <div id="lista-oradores" class="container-fluid row">
-            <div id="orador-1" class="container-fluid col-lg-4 mb-5">
-                <img 
-                    class="img-fluid rounded mb-3"
-                    src="./img/steve-big.jpg" 
-                    alt="foto de Steve Jobs">
-                <div>
-                    <span class="bg-warning rounded px-2 fs-7">JavaScript</span>
-                    <span class="bg-primary text-white rounded px-2 fs-7">React</span>
-                </div>
-                <h5 class="mb-2">Steve Jobs</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
-                Minus nobis eveniet id eligendi totam, repellat nemo sed nostrum cumque nam suscipit omnis alias accusantium hic iure voluptate doloribus. Consequatur molestiae nemo, eveniet sint placeat debitis facilis rem impedit!</p>
-            </div>
-
-            <div id="orador-2" class="container-fluid col-lg-4 mb-5">
-                <img 
-                    class="img-fluid rounded mb-3"
-                    src="./img/bill.jpg" 
-                    alt="foto de Bill Gates">
-                <div>
-                    <span class="bg-warning rounded px-2 fs-7">JavaScript</span>
-                    <span class="bg-primary text-white rounded px-2 fs-7">React</span>
-                </div>
-                <h5 class="mb-2">Bill Gates</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
-                Minus nobis eveniet id eligendi totam, repellat nemo sed nostrum cumque nam suscipit omnis alias accusantium hic iure voluptate doloribus. Consequatur molestiae nemo, eveniet sint placeat debitis facilis rem impedit!</p>
-            </div>
-
-            <div id="orador-3" class="container-fluid col-lg-4 mb-5">
-                <img 
-                    class="img-fluid rounded mb-3"
-                    src="./img/ada.jpeg" 
-                    alt="foto de Ada Lovelace">
-                <div>
-                    <span class="bg-secondary text-white rounded px-2 fs-7">Negocios</span>
-                    <span class="bg-danger text-white rounded px-2 fs-7">Startups</span>
-                </div>
-                <h5 class="mb-2">Ada Lovelace</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium reiciendis corrupti id dolor eligendi temporibus error ipsa doloremque tenetur porro, ullam eum? Dignissimos unde enim quas! Quis, sunt provident.
-                Minus nobis eveniet id eligendi totam, repellat nemo sed nostrum cumque nam suscipit omnis alias accusantium hic iure voluptate doloribus. Consequatur molestiae nemo, eveniet sint placeat debitis facilis rem impedit!</p>
-            </div>
-        </div>
-    </section>
-  
-    <section id="locacion" class="container-fluid row clearfix m-0 p-0 mb-5">
-        <img src="./img/honolulu.jpg" alt="foto de honolulu" class="img-fluid p-0 col-12 col-lg-6">
-        <article class="bg-secondary text-white p-3 col-12 col-lg-6">
-            <h1>Bs As - Octubre</h1>
-            <p>Buenos Aires es la provincia y la localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km<sup>2</sup> de superficie).</p>
-            <a class="btn btn-outline-light">Conocé más</a>            
-        </article>
-    </section>
-
-    <section id="anotarse" class="container-fluid text-center mb-5">
-        <h6 class="fw-light">conviértete en un</h6>
-        <h2 class="mb-3">orador</h2>
-        <p>Anótate como orador para dar una <em>charla ignite</em>.</p>
-        <p>¡Cuéntanos de qué quieres hablar!</p>
-        <div class="row">
-            <div class="col-12 col-md-6 mx-auto">
-                <form class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-2">
-                            <input type="text" class="form-control" id="casilla-nombre" placeholder="Nombre">
-                        </div>
-                        <div class="col-12 col-md-6 mb-2">
-                            <input type="text" class="form-control col-12 col-md-6 mb-2" id="casilla-apellido" placeholder="Apellido">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 mb-2"><textarea class="form-control mb-2" id="casilla-tema" cols="30" rows="6" placeholder="¿Sobre qué quieres hablar?"></textarea></div>
-                    </div>
-                    <div class="row text-start">
-                        <label class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un título para tu charla.</label>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-success w-100">Enviar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+    </main>
     
     <footer id="pie" class="container-fluid mx-0 p-3 bg-info-subtle text-white" data-bs-theme="dark">
         <ul class="row">

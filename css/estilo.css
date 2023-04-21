@@ -1,6 +1,18 @@
+:root {
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 ol, ul {
@@ -39,36 +51,25 @@ a:hover {
     flex-direction: row-reverse;
 }
 
-.conferencia-articulo {
-    display: inline-block;
-}
-
-/* estas reglas son para la flech arriba que por el momento esta descartada.
-.volver-arriba {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-}
-*/
-
 @media only screen and (max-width: 575px) {
-    .conferencia-articulo {
+    .superpuesto {
         position: relative;
-        right: 0;
+        left: 0;
         top: 0;
     }
 }
 
-@media only screen and (min-width: 756px) {
-    .conferencia-articulo {
+@media only screen and (min-width: 576px) {
+    .superpuesto {
         position: absolute;
-        right: 0;
+        height: 100%;
+        left: 0;
         top: 0;
     }
 }
 
 .destino-nav {
-    scroll-margin-top: 2.9rem;
+    scroll-margin-top: 3.3rem;
 }
 
 .titulo-seccion {

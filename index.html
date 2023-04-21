@@ -54,20 +54,22 @@
     
     <main>
         <header id="conferencia" class="container-fluid destino-nav position-relative clearfix mb-5 p-0">
-            <img class="img-fluid" src="./img/ba1.jpg" alt="foto de buenos aires">
-            <section class="conferencia-articulo d-flex w-100 h-100 bg-dark bg-opacity-50 text-white float-end text-end">
-                <div class="pe-3 pe-md-4 pe-lg-5 pt-5 pb-3">
-                    <h2>Conf Bs As</h2>
-                    <p class="d-inline-block col-11 col-sm-9 col-md-6 col-lg-4">
+            <div>
+                <img class="img-fluid" src="./img/ba1.jpg" alt="foto de buenos aires">
+            </div>
+            <div class="superpuesto w-100 h-100 d-flex flex-row-reverse bg-dark bg-opacity-50 text-white">
+                <div class="col-lg-4 d-flex flex-column align-self-center align-content-end me-5">
+                    <h2 class="text-end">Conf Bs As</h2>
+                    <p class="text-end">
                         Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
                     </p>
-                    <p>¡Te esperamos!</p>
-                    <div class="container-fluid clearfix p-0">
-                        <a class="btn btn-success float-end ms-2 mb-2">Comprar tickets</a>
-                        <a href="#anotarse" class="btn btn-outline-light float-end">Quiero ser orador</a>
+                    <p class="text-end">¡Te esperamos!</p>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-success">Comprar tickets</a>
+                        <a href="#anotarse" class="btn btn-outline-light ms-3">Quiero ser orador</a>
                     </div>
                 </div>
-            </section>
+            </div>
         </header>
         
         <article id="oradores" class="container destino-nav pt-2">
@@ -175,26 +177,16 @@
     </main>
     
     <footer id="pie" class="container-fluid mx-0 p-3 bg-info-subtle text-white" data-bs-theme="dark">
-        <ul class="row">
-            <li class="mb-3 col-6 col-md-2 text-center">Preguntas frecuentes</li>
-            <li class="mb-3 col-6 col-md-2 text-center">Contáctanos</li>
-            <li class="mb-3 col-6 col-md-1 text-center">Prensa</li>
-            <li class="mb-3 col-6 col-md-2 text-center">Conferencias</li>
-            <li class="mb-3 col-6 col-md-2 text-center">Términos y condiciones</li>
-            <li class="mb-3 col-6 col-md-1 text-center">Privacidad</li>
-            <li class="mb-3 col-6 col-md-1 text-center">Estudiantes</li>
+        <ul class="row align-content-center">
+            <li class="mb-3 col-6 col-md-2 lh-1 text-center">Preguntas frecuentes</li>
+            <li class="mb-3 col-6 col-md-2 lh-1 text-center">Contáctanos</li>
+            <li class="mb-3 col-6 col-md-1 lh-1 text-center">Prensa</li>
+            <li class="mb-3 col-6 col-md-2 lh-1 text-center">Conferencias</li>
+            <li class="mb-3 col-6 col-md-2 lh-1 text-center">Términos y condiciones</li>
+            <li class="mb-3 col-6 col-md-1 lh-1 text-center">Privacidad</li>
+            <li class="mb-3 col-6 col-md-1 lh-1 text-center">Estudiantes</li>
         </ul>
     </footer>
-
-    <!-- La flecha arriba no es necesaria si la barra de navegacion te lleva arriba.
-    <div class="volver-arriba bg-dark bg-opacity-50 rounded">
-        <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-        </a>
-    </div>
-    -->
 
     <script src="./js/navegar.js"></script>
     <script

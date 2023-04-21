@@ -54,7 +54,7 @@ a:hover {
 @media only screen and (max-width: 575px) {
     .superpuesto {
         position: relative;
-        right: 0;
+        left: 0;
         top: 0;
     }
 }
@@ -63,7 +63,7 @@ a:hover {
     .superpuesto {
         position: absolute;
         height: 100%;
-        right: 0;
+        left: 0;
         top: 0;
     }
 }

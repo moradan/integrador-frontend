@@ -16,7 +16,7 @@ function navegar(e) {
 
 function activarMenu() {
     const REM = 16;
-    const ALTO_BARRA = 3.4 * REM;
+    const ALTO_BARRA = 4.1 * REM;
     
     const li = document.querySelectorAll(".nav-link");
     const sec = document.querySelectorAll(".destino-nav");

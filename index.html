@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,25 +11,21 @@
 
     <!-- Bootstrap CDN -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"/>
 
     <!-- Estilo propio -->
-    <link rel="stylesheet" href="./css/estilo.css" />
-  </head>
+    <link rel="stylesheet" href="./css/estilo.css"/>
+</head>
 
-  <body>
-
-    <header id="navegador" class="container-fluid position-sticky top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
+<body>
+    <!-- Barra de título y navegación -->
+    <header class="container-fluid sombra position-sticky top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
         <div class="navbar navbar-expand-lg p-0">
             <a href="#" class="navbar-brand col-2 p-0">
-                <img
-                    class="img-fluid" 
-                    src="./img/codoacodo.png" 
-                    alt="logo de codo a codo">
+                <img class="img-fluid" src="./img/codoacodo.png" alt="logo de codo a codo">
                 <span>Bs As Conf</span>
             </a>
             <button class="navbar-toggler m-1 p-1" 
@@ -52,6 +49,7 @@
         </div>
     </header>
     
+    <!-- Cuerpo principal de la página -->
     <main>
         <header id="conferencia" class="container-fluid destino-nav position-relative mb-5 p-0">
             <div>
@@ -74,7 +72,7 @@
             </div>
         </header>
         
-        <article id="oradores" class="container destino-nav pt-2">
+        <article id="oradores" class="container-fluid destino-nav pt-2">
             <header class="titulo-seccion">
                 <h2 class="mb-3">oradores</h2>
                 <p class="volanta">conoce a los</p  >
@@ -134,7 +132,7 @@
             </ul>
         </article>
 
-        <article id="locacion" class="container-fluid row destino-nav clearfix m-0 p-0 mb-5">
+        <article id="locacion" class="container-fluid destino-nav row clearfix m-0 p-0 mb-5">
             <img src="./img/honolulu.jpg" alt="foto de honolulu" class="img-fluid p-0 col-12 col-lg-6">
             <section class="bg-secondary text-white p-3 col-12 col-lg-6">
                 <h2>Bs As - Octubre</h2>
@@ -179,6 +177,7 @@
         </article>
     </main>
     
+    <!-- Pie con vinculos a otros recursos -->
     <footer id="pie" class="container-fluid mx-0 p-3 bg-info-subtle text-white" data-bs-theme="dark">
         <ul class="row align-content-center">
             <li class="mb-3 col-6 col-md-2 lh-1 text-center">Preguntas frecuentes</li>
@@ -191,11 +190,12 @@
         </ul>
     </footer>
 
+    <!-- Scripts -->
     <script src="./js/navegar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-  </body>
+</body>
 </html>

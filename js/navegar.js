@@ -13,3 +13,31 @@ function navegar(e) {
     link.classList.add("active");
     objetivo.scrollIntoView();
 }
+
+function activarMenu() {
+    const REM = 16;
+    const ALTO_BARRA = 3.4 * REM;
+    
+    const li = document.querySelectorAll(".nav-link");
+    const sec = document.querySelectorAll(".destino-nav");
+
+    let len = sec.length;
+
+    while(--len && window.scrollY + ALTO_BARRA < sec[len].offsetTop) {}
+    li.forEach((link) => {link.classList.remove("active")});
+    li[len].classList.add("active");
+}
+
+function colapsarMenu()
+{
+    let menu = document.querySelector(".navbar-collapse");
+    let boton = document.querySelector("button.navbar-toggler");
+
+    if (menu.classList.contains("show")) {
+        boton.click();
+    }
+}
+
+activarMenu();
+window.addEventListener("scroll", activarMenu);
+window.addEventListener("click", colapsarMenu);

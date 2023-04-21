@@ -2,34 +2,30 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Codo a Codo</title>
-<link rel="shortcut icon" href="./img/codoacodo.png" type="image/x-icon" />
+    <title>Codo a Codo</title>
+    <link rel="shortcut icon" href="./img/codoacodo.png" type="image/x-icon" />
 
-<!-- Bootstrap CDN -->
-<link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-    crossorigin="anonymous"
-/>
+    <!-- Bootstrap CDN -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"/>
 
-<!-- Estilo propio -->
-<link rel="stylesheet" href="./css/estilo.css" />
+    <!-- Estilo propio -->
+    <link rel="stylesheet" href="./css/estilo.css"/>
 </head>
 
 <body>
-
-    <header id="navegador" class="container-fluid sombra position-sticky top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
+    <!-- Barra de título y navegación -->
+    <header class="container-fluid sombra position-sticky top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
         <div class="navbar navbar-expand-lg p-0">
             <a href="#" class="navbar-brand col-2 p-0">
-                <img
-                    class="img-fluid" 
-                    src="./img/codoacodo.png" 
-                    alt="logo de codo a codo">
+                <img class="img-fluid" src="./img/codoacodo.png" alt="logo de codo a codo">
                 <span>Bs As Conf</span>
             </a>
             <button class="navbar-toggler m-1 p-1" 
@@ -53,6 +49,7 @@
         </div>
     </header>
     
+    <!-- Cuerpo principal de la página -->
     <main>
         <header id="conferencia" class="container-fluid destino-nav position-relative mb-5 p-0">
             <div>
@@ -180,6 +177,7 @@
         </article>
     </main>
     
+    <!-- Pie con vinculos a otros recursos -->
     <footer id="pie" class="container-fluid mx-0 p-3 bg-info-subtle text-white" data-bs-theme="dark">
         <ul class="row align-content-center">
             <li class="mb-3 col-6 col-md-2 lh-1 text-center">Preguntas frecuentes</li>
@@ -192,6 +190,7 @@
         </ul>
     </footer>
 
+    <!-- Scripts -->
     <script src="./js/navegar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

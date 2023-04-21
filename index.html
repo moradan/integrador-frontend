@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/estilo.css" />
   </head>
 
-  <body>
+  <body class="container-fluid p-0 m-0">
 
     <header id="navegador" class="container-fluid position-sticky top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
         <div class="navbar navbar-expand-lg p-0">
@@ -53,20 +53,22 @@
     </header>
     
     <main>
-        <header id="conferencia" class="container-fluid destino-nav position-relative clearfix mb-5 p-0">
+        <header id="conferencia" class="container-fluid destino-nav position-relative mb-5 p-0">
             <div>
                 <img class="img-fluid" src="./img/ba1.jpg" alt="foto de buenos aires">
             </div>
-            <div class="superpuesto w-100 h-100 d-flex flex-row-reverse bg-dark bg-opacity-50 text-white">
-                <div class="col-lg-4 d-flex flex-column align-self-center align-content-end me-5">
-                    <h2 class="text-end">Conf Bs As</h2>
-                    <p class="text-end">
-                        Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
-                    </p>
-                    <p class="text-end">¡Te esperamos!</p>
-                    <div class="d-flex justify-content-end">
-                        <a class="btn btn-success">Comprar tickets</a>
-                        <a href="#anotarse" class="btn btn-outline-light ms-3">Quiero ser orador</a>
+            <div class="superpuesto container-fluid d-flex flex-row align-items-center bg-dark bg-opacity-50 text-white p-0">
+                <div class="row d-flex justify-content-end">
+                    <div class="col-11 col-lg-4 my-3 mx-3 me-sm-3 me-lg-5">
+                        <h2 class="text-end">Conf Bs As</h2>
+                        <p class="text-end">
+                            Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
+                        </p>
+                        <p class="text-end">¡Te esperamos!</p>
+                        <div class="d-flex justify-content-end">
+                            <a class="btn btn-success">Comprar tickets</a>
+                            <a href="#anotarse" class="btn btn-outline-light ms-3">Quiero ser orador</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,14 +144,15 @@
         </article>
 
         <article id="anotarse" class="container-fluid destino-nav text-center mb-5">
-            <header class="titulo-seccion">
-                <h2 class="mb-3">orador</h2>
-                <p class="volanta">conviértete en un</p>
-            </header>
-            <p>Anótate como orador para dar una <em>charla ignite</em>.</p>
-            <p>¡Cuéntanos de qué quieres hablar!</p>
+            <div class="mb-2">
+                <header class="titulo-seccion">
+                    <h2 class="mb-3">orador</h2>
+                    <p class="volanta">conviértete en un</p>
+                </header>
+                <span>Anótate como orador spanara dar una <em>charla ignite</em>. ¡Cuéntanos de qué quieres hablar!</span>
+            </div>
             <div class="row">
-                <div class="col-12 col-md-6 mx-auto">
+                <div class="col-12 col-md-10 col-lg-6 mx-auto">
                     <form class="container-fluid">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-2">

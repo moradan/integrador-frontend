@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 ol, ul {
     list-style-type: none;
 }
@@ -58,13 +62,14 @@ a:hover {
 @media only screen and (min-width: 576px) {
     .superpuesto {
         position: absolute;
+        height: 100%;
         right: 0;
         top: 0;
     }
 }
 
 .destino-nav {
-    scroll-margin-top: 2.9rem;
+    scroll-margin-top: 3.3rem;
 }
 
 .titulo-seccion {

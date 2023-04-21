@@ -9,6 +9,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -86,4 +87,8 @@ a:hover {
     font-size: 0.7rem;
     font-weight: normal;
     margin-bottom: 0;
+}
+
+.sombra {
+    box-shadow: 0 0.3rem 2rem black;
 }

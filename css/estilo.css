@@ -92,3 +92,8 @@ a:hover {
 .sombra {
     box-shadow: 0 0.3rem 2rem black;
 }
+
+.bg-gradiente {
+    background: #134;
+    background: linear-gradient(+90deg,#134, #257);
+}

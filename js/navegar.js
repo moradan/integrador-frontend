@@ -16,14 +16,14 @@ function navegar(e) {
 
 function activarMenu() {
     const REM = 16;
-    const ALTO_BARRA = 20 * REM;
+    const DESPLAZADO = 20 * REM;
     
     const li = document.querySelectorAll(".nav-link");
     const sec = document.querySelectorAll(".destino-nav");
 
     let len = sec.length;
 
-    while(--len && window.scrollY + ALTO_BARRA < sec[len].offsetTop) {}
+    while(--len && window.scrollY + DESPLAZADO < sec[len].offsetTop) {}
     li.forEach((link) => {link.classList.remove("active")});
     li[len].classList.add("active");
 }

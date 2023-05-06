@@ -1,16 +1,10 @@
 function navegar(e) {
-    const actual = document.querySelector(".nav-link.active");
     const link = e.currentTarget;
     const objetivo = document.querySelector("#" + link.dataset.target);
     const menu = document.querySelector(".navbar-collapse");
     
     menu.classList.remove("show");
-
-    if (actual !== null) {
-        actual.classList.remove("active");
-    }
     
-    link.classList.add("active");
     objetivo.scrollIntoView();
 }
 
@@ -18,14 +12,27 @@ function activarMenu() {
     const REM = 16;
     const DESPLAZADO = 20 * REM;
     
-    const li = document.querySelectorAll(".nav-link");
-    const sec = document.querySelectorAll(".destino-nav");
+    const linksNavegacion = document.querySelectorAll(".nav-link");
+    const destinosNavegacion = document.querySelectorAll(".destino-nav");
+    const quiebresY = [];
 
-    let len = sec.length;
+    for (const destino of destinosNavegacion) {
+        const quiebreY = destino.offsetTop - DESPLAZADO;
+        quiebresY.push(quiebreY);
+    }
 
-    while(--len && window.scrollY + DESPLAZADO < sec[len].offsetTop) {}
-    li.forEach((link) => {link.classList.remove("active")});
-    li[len].classList.add("active");
+    let seccion = 0;
+    while(scrollY >= quiebresY[seccion + 1]) {
+        seccion++;
+    }
+
+    for (const link of linksNavegacion) {
+        link.classList.remove("active");
+    }
+
+    if (seccion >= 0) {
+        linksNavegacion[seccion].classList.add("active");
+    }
 }
 
 function colapsarMenu()

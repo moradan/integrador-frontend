@@ -45,6 +45,6 @@ function colapsarMenu()
     }
 }
 
-activarMenu();
 window.addEventListener("scroll", activarMenu);
 window.addEventListener("click", colapsarMenu);
+activarMenu();

@@ -22,7 +22,7 @@ function activarMenu() {
     }
 
     let seccion = 0;
-    while(scrollY >= quiebresY[seccion]) {
+    while(scrollY >= quiebresY[seccion + 1]) {
         seccion++;
     }
 
@@ -45,6 +45,6 @@ function colapsarMenu()
     }
 }
 
-activarMenu();
 window.addEventListener("scroll", activarMenu);
 window.addEventListener("click", colapsarMenu);
+activarMenu();

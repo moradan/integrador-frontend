@@ -22,7 +22,7 @@ function activarMenu() {
     }
 
     let seccion = 0;
-    while(scrollY >= quiebresY[seccion + 1]) {
+    while(scrollY >= quiebresY[seccion]) {
         seccion++;
     }
 

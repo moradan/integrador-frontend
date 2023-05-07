@@ -30,9 +30,7 @@ function activarMenu() {
         link.classList.remove("active");
     }
 
-    if (seccion >= 0) {
-        linksNavegacion[seccion].classList.add("active");
-    }
+    linksNavegacion[seccion].classList.add("active");
 }
 
 function colapsarMenu()

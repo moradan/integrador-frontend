@@ -54,20 +54,19 @@ class Senialador {
 
     #onClick(event) {
         this.#colapsarMenu();
-
-        const link = event.currentTarget;
-        const objetivo = document.querySelector(link.dataset.target);
         
-        objetivo.scrollIntoView();    
+        if (event.currentTarget != window) {
+            const link = event.currentTarget;
+            const objetivo = document.querySelector(link.dataset.target);
+
+            objetivo.scrollIntoView(true);    
+        }
     }
 
     #colapsarMenu() {
         let menu = document.querySelector(".navbar-collapse");
-        let boton = document.querySelector("button.navbar-toggler");
     
-        if (menu.classList.contains("show")) {
-            boton.click();
-        }
+        menu.classList.remove("show");
     }
 }
 

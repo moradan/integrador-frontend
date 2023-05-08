@@ -73,6 +73,10 @@ a:hover {
     scroll-margin-top: 4rem;
 }
 
+.nav-item:hover {
+    cursor: pointer;
+}
+
 .titulo-seccion {
     display: flex;
     flex-direction: column-reverse;

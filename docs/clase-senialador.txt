@@ -20,7 +20,7 @@ El click listener tiene que determinar si la barra esta expandida para cerrarla;
 Si la barra no esta expandida, no hace falta que Senialador haga nada; aqui cabe recordar que la funcionalidad de expandir la barra ya la cubre Bootstrap 5.
 El click listener tambien tiene que vijilar si se hizo click en un elemento link para disparar la accion de desplazar hasta la seccion deseada.
 El listener de scroll se encarga de mantener actualizado cual link esta resaltado y cuales atenuados.
-Cada vez que se efectua un desplazamiento, este listener tiene que comparar la variable Window.scrollY con el breakpoint de cada seccion navegable para decidir cual seccion esta mas centrada en la vista vertical; luego atenuar todos los links de navegacion; y finalmente resaltar el link que corresponde a la seccion que actualmente esta centrada en pantalla.
+Cada vez que se efectua un desplazamiento, este listener tiene que comparar entre las dos secciones mostradas y decidir cual seccion esta mostrando un mayor porcentaje de su contenido; luego atenuar todos los links de navegacion; y finalmente resaltar el link que corresponde a la seccion que actualmente esta centrada en pantalla.
 
 Campos y metodos:
 Para conseguir todos estos efectos, el objeto de clase senialador precisa informacion sobre la pagina que debera ser almacenada en campos y metodos que se encarguen del comportamiento.

@@ -18,16 +18,11 @@ class Senialador {
     };
 
     activarMenu() {
-       const puntosQuiebre = this.#obtenerPuntosQuiebre();
-
-        // vamos a iterar por cada valor seccion hasta que lleguemos al valor seccion que corresponde a la seccion centrada.
-       let seccion = 0;
-       // una seccion esta centrada en pantalla si el scrollY de la ventana es menor que el punto de quiebre de la siguiente seccion.
-       // si scroll de ventana es mayor que el punto de quiebre de la siguiente seccion hay que repetir la comparacion con seccion++
-        while(window.scrollY >= puntosQuiebre[seccion + 1]) {
-            seccion++;
-        }
-        //en este punto seccion nos dice que seccion de navegacion esta mas centrada en la pantalla
+        // determinar que secciones estan visibles
+        // determinar la proporcion de contenido visible de cada seccion
+        // determinar cual seccion tiene mas contenido visible
+        // determinar el orden de esa seccion
+        // determinar el orden del link
     
         //se elimina la clase active de todos los links de navegacion
         for (const link of this.#links) {
@@ -36,20 +31,6 @@ class Senialador {
     
         //se activa el link de navegacion adecuado usando seccion como indice.
         this.#links[seccion].classList.add("active");
-    }
-
-    #obtenerPuntosQuiebre() {
-        const puntosQuiebre = [];
-
-        for (const seccion of this.#secciones) {
-            const alturaSeccion = seccion.offsetHeight;
-            const comienzoSeccion = seccion.offsetTop;
-            const alturaVentana = window.innerHeight;
-            const puntoQuiebre = comienzoSeccion + (alturaSeccion / 2) - alturaVentana;
-            puntosQuiebre.push(puntoQuiebre);
-        }
-
-        return puntosQuiebre;
     }
 
     #onClick(event) {

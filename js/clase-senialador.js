@@ -4,9 +4,11 @@ class Senialador {
     #secciones = [];
  
     constructor () {
-        this.#links = document.querySelectorAll(".nav-link");
-        this.#secciones = document.querySelectorAll(".destino-nav");
-        this.#asignarListeners();
+        #obtenerSecciones();
+        #obtenerLinks();
+        //asignar click listener a cada link de navegacion
+        //asignar click listener a ventana
+        #inicializarObserver();
     }
     
     #asignarListeners() {
@@ -14,9 +16,9 @@ class Senialador {
             link.addEventListener("click", this.#onClick.bind(this));
         }
         window.addEventListener("click", this.#onClick.bind(this));
-        window.addEventListener("scroll", this.activarMenu.bind(this));
     };
 
+    // se llama asincronicamente gracias al Intersection Observer definido en el constructor, cuando alguna seccion cambia su visibilidad y hay que determinar si hay que cambiar el menu activo
     activarMenu() {
         // determinar que secciones estan visibles
         // determinar la proporcion de contenido visible de cada seccion

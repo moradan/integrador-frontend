@@ -2,6 +2,8 @@
 class Senialador {
     #secciones = [];
     #links = [];
+    #seccionesCambiadas;
+    #seccionCentrada;
  
     constructor () {
         this.#obtenerSecciones();
@@ -33,29 +35,38 @@ class Senialador {
     }
 
     // se llama asincronicamente gracias al Intersection Observer definido en el constructor, cuando alguna seccion cambia su visibilidad y hay que determinar si hay que cambiar el menu activo
-    #refrescarMenus(seccionesVisibles, observador) {
-        const visibilidades = [];
+    #refrescarMenus(seccionesCambiadas) {
+        this.#determinarSeccionCentrada(seccionesCambiadas);
+        this.#atenuarMenus();
+        this.#resaltarMenu(seccionCentrada);
+    }
 
-        for (const seccion of seccionesVisibles) {
+    #determinarSeccionCentrada(seccionesCambiadas) {
+        this.#seccionesCambiadas = seccionesCambiadas;
+        const visibilidades = this.#obtenerVisibilidades();
+        const maximaVisibilidad = Math.max(...visibilidades);
+        const indiceSeccionCentrada = visibilidades.indexOf(maximaVisibilidad);
+        this.#seccionCentrada = this.#seccionesCambiadas[indiceSeccionCentrada].target;
+    }
+    
+    #obtenerVisibilidades() {
+        const visibilidades = [];
+        for (const seccion of this.#seccionesCambiadas) {
             if (seccion.isIntersecting) {
                 visibilidades.push(seccion.intersectionRatio);
             } 
         }
-        const indiceSeccionCentrada = maximo(visibilidades);
-        const seccionCentrada = seccionesVisibles[indiceSeccionCentrada].target;
-    
-        this.#atenuarMenus();
-        this.#resaltarMenu(seccionCentrada);
+        return visibilidades;
     }
-    
+
     #atenuarMenus() {
         for (const link of this.#links) {
             link.classList.remove("active");
         }
     }
     
-    #resaltarMenu(seccionCentrada) {
-        let link = this.#obtenerLink(seccionCentrada);
+    #resaltarMenu() {
+        let link = this.#obtenerLink(this.#seccionCentrada);
         link.classList.add("active");
     }
 
@@ -84,4 +95,3 @@ class Senialador {
 }
 
 const miSenialador = new Senialador();
-miSenialador.activarMenu();

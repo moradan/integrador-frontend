@@ -1,14 +1,21 @@
 
 class Senialador {
-    #links = [];
     #secciones = [];
+    #links = [];
  
     constructor () {
-        #obtenerSecciones();
-        #obtenerLinks();
-        //asignar click listener a cada link de navegacion
-        //asignar click listener a ventana
-        #inicializarObserver();
+        this.#obtenerSecciones();
+        this.#obtenerLinks();
+        this.#asignarListeners();
+        this.#inicializarObserver();
+    }
+
+    #obtenerSecciones() {
+        this.#secciones = document.querySelectorAll(".destino-nav");
+    }
+
+    #obtenerLinks() {
+        this.#links = document.querySelectorAll(".nav-link");
     }
     
     #asignarListeners() {
@@ -16,23 +23,46 @@ class Senialador {
             link.addEventListener("click", this.#onClick.bind(this));
         }
         window.addEventListener("click", this.#onClick.bind(this));
-    };
+    }
+    
+    #inicializarObserver() {
+        const observador = new IntersectionObserver(this.#refrescarMenus)
+        for (const seccion of this.#secciones) {
+            observador.observe(seccion);
+        }
+    }
 
     // se llama asincronicamente gracias al Intersection Observer definido en el constructor, cuando alguna seccion cambia su visibilidad y hay que determinar si hay que cambiar el menu activo
-    activarMenu() {
-        // determinar que secciones estan visibles
-        // determinar la proporcion de contenido visible de cada seccion
-        // determinar cual seccion tiene mas contenido visible
-        // determinar el orden de esa seccion
-        // determinar el orden del link
+    #refrescarMenus(seccionesVisibles, observador) {
+        const visibilidades = [];
+
+        for (const seccion of seccionesVisibles) {
+            if (seccion.isIntersecting) {
+                visibilidades.push(seccion.intersectionRatio);
+            } 
+        }
+        const indiceSeccionCentrada = maximo(visibilidades);
+        const seccionCentrada = seccionesVisibles[indiceSeccionCentrada].target;
     
-        //se elimina la clase active de todos los links de navegacion
+        this.#atenuarMenus();
+        this.#resaltarMenu(seccionCentrada);
+    }
+    
+    #atenuarMenus() {
         for (const link of this.#links) {
             link.classList.remove("active");
         }
+    }
     
-        //se activa el link de navegacion adecuado usando seccion como indice.
-        this.#links[seccion].classList.add("active");
+    #resaltarMenu(seccionCentrada) {
+        let link = this.#obtenerLink(seccionCentrada);
+        link.classList.add("active");
+    }
+
+    #obtenerLink(seccion) {
+        let i = 0;
+        while (this.#links[i].dataset.target != seccion.id) {i++}
+        return this.#links[i];
     }
 
     #onClick(event) {

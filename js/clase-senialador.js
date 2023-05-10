@@ -87,11 +87,7 @@ class Senialador {
     #obtenerNavLink(seccion) {
         let i = 0;
         let len = this.#links.length;
-        while (i < len && this.#links[i].dataset.target != seccion) {
-            console.log(seccion);
-            console.log(this.#links[i].dataset.target);
-            i++
-        }
+        while (i < len && this.#links[i].dataset.target != seccion) {i++}
         return this.#links[i];
     }
 

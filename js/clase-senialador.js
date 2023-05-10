@@ -95,10 +95,12 @@ class Senialador {
         this.#colapsarMenu();
         
         if (event.currentTarget != window) {
-            const link = event.currentTarget;
-            const objetivo = document.querySelector(link.dataset.target);
-
-            objetivo.scrollIntoView(true);    
+            const elementoClicado = event.currentTarget;
+            if (elementoClicado.classList.contains("nav-link")) {
+                const link = elementoClicado;
+                const objetivo = document.querySelector(link.dataset.target);
+                objetivo.scrollIntoView();    
+            }
         }
     }
 

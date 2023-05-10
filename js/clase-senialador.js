@@ -2,7 +2,7 @@
 class Senialador {
     #secciones = [];
     #links = [];
-    #seccionesCambiadas;
+    #visibilidades = {};
     #seccionCentrada;
  
     constructor () {
@@ -17,7 +17,7 @@ class Senialador {
     }
 
     #obtenerLinks() {
-        this.#links = document.querySelectorAll(".nav-link");
+        this.#links = document.querySelectorAll(".nav-link:not(.externo)");
     }
     
     #asignarListeners() {
@@ -28,37 +28,49 @@ class Senialador {
     }
     
     #inicializarObserver() {
-        const observador = new IntersectionObserver(this.#refrescarMenus)
+        const opciones = {
+            root: null,
+            margin: "0px",
+            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+        }
+        const observador = new IntersectionObserver(this.#alCambiarVisibilidad.bind(this), opciones);
         for (const seccion of this.#secciones) {
             observador.observe(seccion);
         }
     }
 
     // se llama asincronicamente gracias al Intersection Observer definido en el constructor, cuando alguna seccion cambia su visibilidad y hay que determinar si hay que cambiar el menu activo
-    #refrescarMenus(seccionesCambiadas) {
-        this.#determinarSeccionCentrada(seccionesCambiadas);
-        this.#atenuarMenus();
-        this.#resaltarMenu(seccionCentrada);
+    #alCambiarVisibilidad(objetivosCambiados) {
+        this.#actualizarVisibilidades(objetivosCambiados);
+        this.#determinarSeccionCentrada();
+        this.#refrescarMenus();
     }
 
-    #determinarSeccionCentrada(seccionesCambiadas) {
-        this.#seccionesCambiadas = seccionesCambiadas;
-        const visibilidades = this.#obtenerVisibilidades();
-        const maximaVisibilidad = Math.max(...visibilidades);
-        const indiceSeccionCentrada = visibilidades.indexOf(maximaVisibilidad);
-        this.#seccionCentrada = this.#seccionesCambiadas[indiceSeccionCentrada].target;
+    #actualizarVisibilidades(objetivosCambiados) {
+        for (const objetivo of objetivosCambiados) {
+            const clave = `#${objetivo.target.id}`;
+            const visibilidad = objetivo.intersectionRatio;
+            this.#visibilidades[clave] = visibilidad;
+        }
     }
     
-    #obtenerVisibilidades() {
-        const visibilidades = [];
-        for (const seccion of this.#seccionesCambiadas) {
-            if (seccion.isIntersecting) {
-                visibilidades.push(seccion.intersectionRatio);
-            } 
+    #determinarSeccionCentrada() {
+        let seccionCentrada;
+        for (const clave in this.#visibilidades) {
+            if (!seccionCentrada) {
+                seccionCentrada = clave;
+            } else if (this.#visibilidades[clave] > this.#visibilidades[seccionCentrada] ) {
+                seccionCentrada = clave;
+            }
         }
-        return visibilidades;
+        this.#seccionCentrada = seccionCentrada;
     }
-
+    
+    #refrescarMenus() {
+        this.#atenuarMenus();
+        this.#resaltarMenu();
+    }
+   
     #atenuarMenus() {
         for (const link of this.#links) {
             link.classList.remove("active");
@@ -66,13 +78,20 @@ class Senialador {
     }
     
     #resaltarMenu() {
-        let link = this.#obtenerLink(this.#seccionCentrada);
-        link.classList.add("active");
+        if (this.#seccionCentrada) {
+            let link = this.#obtenerNavLink(this.#seccionCentrada);
+            link.classList.add("active");
+        }
     }
-
-    #obtenerLink(seccion) {
+    
+    #obtenerNavLink(seccion) {
         let i = 0;
-        while (this.#links[i].dataset.target != seccion.id) {i++}
+        let len = this.#links.length;
+        while (i < len && this.#links[i].dataset.target != seccion) {
+            console.log(seccion);
+            console.log(this.#links[i].dataset.target);
+            i++
+        }
         return this.#links[i];
     }
 

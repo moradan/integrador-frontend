@@ -9,7 +9,6 @@
 * {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -71,6 +70,10 @@ a:hover {
 
 .destino-nav {
     scroll-margin-top: 4rem;
+}
+
+.nav-item:hover {
+    cursor: pointer;
 }
 
 .titulo-seccion {

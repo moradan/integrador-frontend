@@ -1,0 +1,51 @@
+Clase senialador
+
+Por que y para que:
+Esta clase provee un modo de encapsular las funcionalidades de navegacion dentro de un sitio web de una sola pagina.
+La clase senialador fue concebida junto con la barra de navegacion de Bootstrap 5. Con el fin de facilitar su adopcion, en el disenio de esta clase se busca reutilizar el mark-up obligatorio de Bootstrap 5, y asi reducir a un minimo o a 0 el requerimiento de mark-up adicional.
+La barra de navegacion de Bootstrap 5 esta diseniada para navegar entre paginas, no dentro de una pagina. Por ese motivo la barra de navegacion expandida no se contrae automaticamente cuando hacemos click en un link; hacer click en un link no lo marca como activo porque Bootstrap 5 asume que la pagina destino se encarga de marcar en html el link activo; desplazarte por la pagina (ya sea mediante rueda del mouse, barra de desplazamiento, desplazamiento por links, javascript, etc.) no actualiza el link activo. Debido a esto, me veo en la obligacion de hacer que la clase senialador asuma estas responsabilidades.
+
+Singleton:
+En un principio se espera que solo exista UNA unica instancia de la clase senialador y que ese objeto se encargue de controlar las acciones y reacciones de navegar dentro de una misma pagina; estoy abierto a la posibilidad de que esto tenga que ser cambiado si hubiese necesidad o utilidad.
+
+Que hace la clase Senialador:  
+La clase senialador tiene la responsabilidad de mantener actualizado cual link esta resaltado cuando se cambia de seccion utilizando cualquier tecnica de desplazamiento.
+La clase senialador tiene que ser responsable de desplazar la ventana del navegador hasta la seccion requerida cuando el usuario hace click en un link de navegacion.
+Tambien es responsabilidad de esta clase contraer el menu expandido cuando se hace click en un link o en cualquier parte de la pantalla.
+  
+Como funciona:
+Para cumplir con estas 3 tareas, la clase senialador utiliza Intersection Observer para vigilar la visibilidad de cada seccion y un event listener para manejar los clicks.
+
+El click listener tiene que determinar si la barra esta expandida para cerrarla; esto tiene que ocurrir independientemente de donde haya hecho click el usuario: la barra se debe cerrar tanto si el usuario hace click en un link, en el boton de cerrarla, o en cualquier lugar fuera de la barra.
+Si la barra no esta expandida, no hace falta que Senialador haga nada; aqui cabe recordar que la funcionalidad de expandir la barra ya la cubre Bootstrap 5.
+El click listener tambien tiene que vijilar si se hizo click en un elemento link para disparar la accion de desplazar hasta la seccion deseada.
+
+Campos y metodos:
+Para conseguir todos estos efectos, el objeto de clase senialador precisa informacion sobre la pagina que debera ser almacenada en campos y metodos que se encarguen del comportamiento.
+  
+Campos:
+#lista de secciones
+#lista de links
+  
+Metodos:
+constructor
+    #obtenerSecciones
+    #obtenerLinks
+    asignar click listener a cada link de navegacion
+    asignar click listener a ventana
+    #inicializarObserver
+#obtenerSecciones
+#obtenerLinks
+#inicializar Observer
+#determinarSeccionCentrada (entries, observer)
+    buscarVisibilidadMaxima (entries) return indiceActivo
+    #refrescarMenus (indiceActivo)
+#refrescarMenus (indiceActivo)
+    atenua todos los #links
+    resalta #links[indiceActivo]
+#click listener
+    si se hizo click en un link, #navegar(target del link)
+    determinar si el menu esta desplegado, ocultar el menu
+#navegar (target)
+    target scrollIntoView
+

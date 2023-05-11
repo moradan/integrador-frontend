@@ -94,8 +94,8 @@ class Senialador {
     #onClick(event) {
         this.#colapsarMenu();
         
-        if (event.currentTarget != window) {
-            const elementoClicado = event.currentTarget;
+        const elementoClicado = event.currentTarget;
+        if (elementoClicado != window) {
             if (elementoClicado.classList.contains("nav-link")) {
                 const link = elementoClicado;
                 const objetivo = document.querySelector(link.dataset.target);

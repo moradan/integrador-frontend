@@ -28,7 +28,7 @@ a:hover {
     cursor: pointer;
 }
 
-.position-sticky {
+.position-fixed {
     z-index: 1;
 }
 

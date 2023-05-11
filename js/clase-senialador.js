@@ -22,16 +22,18 @@ class Senialador {
     }
     
     #asignarListeners() {
+        const homeLink = document.querySelector(".navbar-brand");
+        homeLink.addEventListener("click", this.#onClick.bind(this));
+        
+        window.addEventListener("click", this.#onClick.bind(this));
+        
         for (const link of this.#links) {
             link.addEventListener("click", this.#onClick.bind(this));
         }
-        window.addEventListener("click", this.#onClick.bind(this));
     }
     
     #inicializarObserver() {
         const opciones = {
-            root: null,
-            margin: "0px",
             threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
         }
         const observador = new IntersectionObserver(this.#alCambiarVisibilidad.bind(this), opciones);
@@ -103,6 +105,8 @@ class Senialador {
                 const link = elementoClicado;
                 const objetivo = document.querySelector(link.dataset.target);
                 objetivo.scrollIntoView();    
+            } else if (elementoClicado.classList.contains("navbar-brand")) {
+                window.scrollTo(0, 0);
             }
         }
     }

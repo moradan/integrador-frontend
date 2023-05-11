@@ -5,6 +5,7 @@ class Senialador {
     #visibilidades = {};
     #seccionCentrada;
  
+    // el constructor del objeto senialador llama a las funciones que inicializan los distintos campos asi como crear e inicializar el Intersection Observer
     constructor () {
         this.#obtenerSecciones();
         this.#obtenerLinks();
@@ -66,6 +67,7 @@ class Senialador {
         this.#seccionCentrada = seccionCentrada;
     }
     
+    // refresca los menu para reflejar los cambios de cual link esta activo
     #refrescarMenus() {
         this.#atenuarMenus();
         this.#resaltarMenu();
@@ -91,6 +93,7 @@ class Senialador {
         return this.#links[i];
     }
 
+    // estos metodos son los responsables de navegar por el documento y plegar la barra de navegacion
     #onClick(event) {
         this.#colapsarMenu();
         

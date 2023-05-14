@@ -122,4 +122,4 @@ class Senialador {
     }
 }
 
-const miSenialador = new Senialador();
+const miSenialador = new Senialador(seccionPorDefecto);

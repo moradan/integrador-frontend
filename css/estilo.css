@@ -9,6 +9,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -34,6 +35,10 @@ a:hover {
 
 .fs-7 {
     font-size: 0.8rem;
+}
+
+.text-success-bright {
+    color: rgb(33, 241, 33);
 }
 
 .text-bg-secondary {
@@ -96,7 +101,16 @@ a:hover {
     box-shadow: 0 0.3rem 2rem black;
 }
 
+.text-primary-dark {
+    color: #245;
+}
+
 .bg-gradiente {
     background: #134;
     background: linear-gradient(+90deg,#134, #257);
+}
+
+.btn-success {
+    background-color: #97C93E;
+    border-color: #97C93E;
 }

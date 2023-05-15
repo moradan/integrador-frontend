@@ -1,7 +1,8 @@
 const formulario = {
     valorTicket: 200,
     botonResumen: document.querySelector("#botonResumen"),
-    btonReset: document.querySelector("#botonReset"),
+    botonReset: document.querySelector("#botonReset"),
+    campoNombre: document.querySelector("#campoNombre"),
     campoCantidad: document.querySelector("#campoCantidad"),
     campoCategoria: document.querySelector("#campoCategoria"),
     campoTotal: document.querySelector("#campoTotal"),
@@ -14,18 +15,20 @@ const formulario = {
 
     inicializar: function() {
         this.botonResumen.onclick = this.mostrarResumen.bind(this);
-        this.btonReset.onclick = this.limpiar.bind(this);
-        window.onkeypress = this.evaluarTecla.bind(this);
+        this.botonReset.onclick = this.limpiar.bind(this);
+        window.onkeydown = this.evaluarTecla.bind(this);
         this.campoCategoria.onkeypress = this.evaluarTecla.bind(this);
     },
 
     evaluarTecla: function(evento) {
-
         switch (evento.key) {
             case "Enter":
                 evento.preventDefault();
                 this.mostrarResumen();
                 break;
+            case "Escape":
+                evento.preventDefault();
+                this.botonReset.click();
             default:
         }
     },
@@ -39,6 +42,7 @@ const formulario = {
 
     limpiar: function () {
         this.campoTotal.innerHTML = "";
+        this.campoNombre.focus();
     }
 }
 

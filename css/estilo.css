@@ -81,6 +81,10 @@ a:hover {
     cursor: pointer;
 }
 
+.text-success:hover {
+    color: rgb(33, 241, 33)!important;
+}
+
 .titulo-seccion {
     display: flex;
     flex-direction: column-reverse;

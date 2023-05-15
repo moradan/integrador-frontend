@@ -24,7 +24,7 @@
     <!-- Barra de título y navegación -->
     <header class="container-fluid sombra position-fixed top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
         <div class="navbar navbar-expand-lg p-0">
-            <a class="navbar-brand col-2 p-0">
+            <a href="./index.html" class="navbar-brand col-2 p-0">
                 <img class="img-fluid" src="./img/codoacodo.png" alt="logo de codo a codo">
                 <span>Bs As Conf</span>
             </a>
@@ -43,7 +43,7 @@
                     <li class="nav-item"><a class="nav-link px-3" href="./index.html#oradores">Los oradores</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="./index.html#locacion">El lugar y la fecha</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="./index.html#anotarse">Conviértete en orador</a></li>
-                    <li class="nav-item"><a class="nav-link externo px-3 text-success-bright">Comprar tickets</a></li>
+                    <li class="nav-item"><a class="nav-link externo active px-3">Comprar tickets</a></li>
                 </ul>
             </nav>
         </div>
@@ -69,7 +69,7 @@
                             <div class="p-3 d-flex flex-column align-items-center border border-info">
                                 <h2 class="fs-5 fw-bold">Trainee</h2>
                                 <p>Tiene un descuento</p>
-                                <p class="fw-bold">80%</p>
+                                <p class="fw-bold">50%</p>
                                 <footer class="text-muted fs-7">* presentar documentación</footer>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                             <div class="p-3 d-flex flex-column align-items-center border border-warning">
                                 <h2 class="fs-5 fw-bold">Junior</h2>
                                 <p>Tiene un descuento</p>
-                                <p class="fw-bold">80%</p>
+                                <p class="fw-bold">15%</p>
                                 <footer class="text-muted fs-7">* presentar documentación</footer>
                             </div>
                         </div>
@@ -110,12 +110,11 @@
                         <div class="row g-0 gy-2 gx-2 mb-3">
                             <div class="col-12 col-md-6">
                                 <label for="campoCantidad">Cantidad</label>
-                                <input type="text" class="col-12 col-md-6 form-control" name="campoCantidad" id="campoCantidad" placeholder="cantidad">
+                                <input id="campoCantidad" type="text" class="col-12 col-md-6 form-control" name="campoCantidad" placeholder="cantidad">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="campoCategoria">Categoria</label>
-                                <select class="col-12 col-md-6 form-control" name="campoCategoria" id="campoCategoria">
-                                    <option value="particular">Particular</option>
+                                <select id="campoCategoria" class="col-12 col-md-6 form-control" name="campoCategoria">
                                     <option value="estudiante">Estudiante</option>
                                     <option value="trainee">Trainee</option>
                                     <option value="junior">Junior</option>
@@ -124,18 +123,18 @@
                         </div>
                         <!-- Resumen -->
                         <div class="row justify-content-between bg-info-subtle border border-info-subtle text-primary-dark border border-info rounded g-0 p-3 mb-3">
-                            <div class="col-12">
+                            <div class="col-12 col-md-6">
                                 Total a pagar:
                             </div>
-                            <div class="col-12"></div>
+                            <div id="campoTotal" class="col-12 col-md-6 text-end"></div>
                         </div>
                         <!-- Botones-->
                         <div class="row g-3">
                             <div class="col-12 col-md-6">
-                                <button class="btn btn-success form-control">Borrar</button>
+                                <button id="botonReset" class="btn btn-success form-control" type="reset">Borrar</button>
                             </div>
                             <div class="col-12 col-md-6">
-                                <button class="btn btn-success form-control">Resumen</button>
+                                <button id="botonResumen" class="btn btn-success form-control" type="button">Resumen</button>
                             </div>
                         </div>
                     </form>

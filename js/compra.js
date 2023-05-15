@@ -20,12 +20,13 @@ const formulario = {
     },
 
     evaluarTecla: function(evento) {
-        const TECLA_ENTER = 13;
 
-        if (evento.keyCode == TECLA_ENTER) {
-            evento.preventDefault();
-            evento.stopPropagation();
-            this.mostrarResumen();
+        switch (evento.key) {
+            case "Enter":
+                evento.preventDefault();
+                this.mostrarResumen();
+                break;
+            default:
         }
     },
 

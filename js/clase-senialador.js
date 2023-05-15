@@ -113,8 +113,12 @@ class Senialador {
 
     #colapsarMenu() {
         let menu = document.querySelector(".navbar-collapse");
-    
-        menu.classList.remove("show");
+        let boton = document.querySelector(".navbar-toggler");
+        
+        if (menu.classList.contains("show")) {
+            boton.click();
+        }
+
     }
 }
 

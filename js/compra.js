@@ -51,6 +51,7 @@ const formulario = {
     },
 
     limpiar: function () {
+        this.mensajeAdvertencia.classList.remove("d-none");
         this.campoTotal.innerHTML = "";
         this.campoNombre.focus();
     }

@@ -16,12 +16,15 @@ const formulario = {
         this.botonResumen.onclick = this.mostrarResumen.bind(this);
         this.btonReset.onclick = this.limpiar.bind(this);
         window.onkeypress = this.evaluarTecla.bind(this);
+        this.campoCategoria.onkeypress = this.evaluarTecla.bind(this);
     },
 
     evaluarTecla: function(evento) {
         const TECLA_ENTER = 13;
 
         if (evento.keyCode == TECLA_ENTER) {
+            evento.preventDefault();
+            evento.stopPropagation();
             this.mostrarResumen();
         }
     },

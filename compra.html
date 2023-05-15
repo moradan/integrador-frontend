@@ -110,7 +110,7 @@
                         <div class="row g-0 gy-2 gx-2 mb-3">
                             <div class="col-12 col-md-6">
                                 <label for="campoCantidad">Cantidad</label>
-                                <input id="campoCantidad" type="text" class="col-12 col-md-6 form-control" name="campoCantidad" placeholder="cantidad">
+                                <input id="campoCantidad" type="number" class="col-12 col-md-6 form-control" name="campoCantidad" placeholder="cantidad">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="campoCategoria">Categoria</label>
@@ -127,6 +127,9 @@
                                 Total a pagar:
                             </div>
                             <div id="campoTotal" class="col-6 text-end"></div>
+                            <div id="advertencia" class="text-danger d-none">
+                                * Antes de efectuar la compra recuerde completar los datos personales
+                            </div>
                         </div>
                         <!-- Botones-->
                         <div class="row g-3">

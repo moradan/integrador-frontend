@@ -41,7 +41,7 @@ const formulario = {
     mostrarResumen: function() {
         const cantidad = this.campoCantidad.value;
         
-        if (cantidad < 0) {
+        if (cantidad < 1) {
             this.mensajeAdvertenciaCantidad.classList.remove("d-none");
             this.campoCantidad.value = "";
             this.campoCantidad.focus();
